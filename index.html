@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>my site</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+
+
+    <header> 
+      <div class="topHead">
+          <div class="logo">
+              <img src="images/logo.jpg" alt="Logo" />
+          </div>
+  
+          <div class="user-info">
+            <p id="animatedParagraph">ЭФБО-06-23</p>
+              <p>Наротнев Георгий Владиславович</p>
+          </div>
+      </div>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Главная</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Главная <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <li onclick="toggleText()"><a class="nav-link" href="#">Услуги</a></li>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Курсы
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="firstsem.html">Первый семестр</a>
+                <a class="dropdown-item" href="#">Второй семестр</a>
+                <div class="dropdown-divider"></div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="form1.html">Форма</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+  </header>
+
+   
+    <main>
+      <div id="text-content" class="Text">
+        <div class="Profiling">
+<div>
+  <h1 id="mainTitle">Добро пожаловать на мой сайт</h1>
+<h2>Проверка!!!!!</h2>
+<p style="padding-top: 30px">Меня зовут Наротнев Георгий Владиславович, я начинающий специалист по веб-разработке.</p>
+
+</div>
+
+
+<img id="studentPhoto" 
+     src="images/asd.jpg" 
+     alt="Фото" 
+     style="transition: all 0.3s ease;">
+
+
+</div>
+<h1>Фронтенд</h1>
+<p>Фронтенд (или клиентская часть) - это то, что видит пользователь. Он включает в себя все визуальные элементы веб-сайта или приложения: кнопки, формы, изображения и текст. Фронтенд разработчики используют языки разметки и стилизации, такие как HTML, CSS и JavaScript, чтобы создавать
+    интерактивные и привлекательные интерфейсы. Основная задача фронтенда
+    — обеспечить удобство использования и эстетическую привлекательность.</p>
+    <object>
+      <iframe
+        width="720"
+        height="405"
+        src="https://rutube.ru/play/embed/2d73d9105d38e63362423ba816dcf035"
+        frameBorder="0"
+        allow="clipboard-write; autoplay"
+        webkitAllowFullScreen
+        mozallowfullscreen
+        allowFullScreen
+      ></iframe>
+      <script src="main.js"></script>
+    </object>
+<h1>Бэкенд</h1>
+<p>Бэкенд (или серверная часть) — это "за кулисами" веб-приложения. Он отвечает за обработку данных, управление пользователями и взаимодействие с базами данных. Бэкенд разработчики используют языки программирования, такие как Python, Ruby, Java или РНР, а также фреймворки и базы данных для создания логики приложения. Основная задача бэкенда - обеспечить
+    стабильную работу приложения и безопасность данных.</p>
+  <object>
+      <iframe
+        width="720"
+        height="405"
+        src="https://rutube.ru/play/embed/2d73d9105d38e63362423ba816dcf035"
+        frameBorder="0"
+        allow="clipboard-write; autoplay"
+        webkitAllowFullScreen
+        mozallowfullscreen
+        allowFullScreen
+      ></iframe>
+    </object>
+    
+      </div>
+    </main>
+
+    <script>
+        let isOriginal = true;
+    
+        function toggleText() {
+          const textDiv = document.getElementById('text-content');
+          if (isOriginal) {
+            textDiv.innerHTML = `
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/vis.jpg" class="d-block w-100" alt="">
+    </div>
+    <div class="carousel-item">
+      <img src="images/korp.jpg" class="d-block w-100" alt="">
+    </div>
+    <div class="carousel-item">
+      <img src="images/shop.jpg" class="d-block w-100" alt="">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>  
+            <div class="grid container">
+                <h1>Разработка веб-приложений</h1>
+                <div class='images'>
+                  <div class='imageCont'>
+                    <img src='images/vis.jpg' alt='Сайт-визитка'/>
+                    <form action="page/new.html" target="_blank">
+                      <p align="center">Сайт-визитка</p>
+                      <button type="submit">Заказать</button>
+                      </form>
+                      </div>
+                      <div class='imageCont'>
+                        <img src='images/korp.jpg' alt='Корпоративный сайт'/>
+                        <form action="page/new.html" target="_blank">
+                          <p align="center">Корпоративный сайт</p>
+                          <button type="submit">Заказать</button>
+                          </form>
+                          </div>
+                          <div class='imageCont'>
+                            <img src='images/shop.jpg' alt='Интернет-магазин'/>
+                            <form action="page/new.html" target="_blank">
+                              <p align="center">Интернет-магазин</p>
+                              <button type="submit">Заказать</button>
+                              </form>
+                              </div>
+                              </div>
+                              </div>
+
+            `;
+          } else {
+            textDiv.innerHTML = `
+            
+                <div class="Profiling">
+                  <div>
+                    <h1>Добро пожаловать на мой сайт</h1>
+                    <p>Меня зовут Наротнев Георгий Владиславович и я начинающий
+                        специалист по веб-разработке.</p>
+                  </div>
+                  <img src="images/asd.jpg" alt="profileImg"/>
+                </div>
+                <h1>Фронтенд</h1>
+                <h2>Фронтенд (или клиентская часть) - это то, что видит пользователь. Он включает в себя все визуальные элементы веб-сайта или приложения: кнопки, формы, изображения и текст. Фронтенд разработчики используют языки разметки и стилизации, такие как HTML, CSS и JavaScript, чтобы создавать
+интерактивные и привлекательные интерфейсы. Основная задача фронтенда
+— обеспечить удобство использования и эстетическую привлекательность.</h2>
+                <h1>Бэкенд</h1>
+                <h2>Фронтенд (или клиентская часть) - это то, что видит пользователь. Он включает в себя все визуальные элементы веб-сайта или приложения: кнопки, формы, изображения и текст. Фронтенд разработчики используют языки разметки и стилизации, такие как HTML, CSS и JavaScript, чтобы создавать
+интерактивные и привлекательные интерфейсы. Основная задача фронтенда
+— обеспечить удобство использования и эстетическую привлекательность.</h2>
+             
+            `;
+          }
+          isOriginal = !isOriginal; 
+        }
+      </script>
+    <button class="scroll-to-top" id="scrollToTop">Вверх</button>  
+    <footer>
+      <p>© Наротнев Георгий Владиславович, 2024</p>
+    </footer>
+    <script>
+      // Получаем кнопку
+const scrollToTopButton = document.getElementById('scrollToTop');
+
+// Функция для плавной прокрутки вверх
+function scrollToTop() {
+    // Получаем текущую позицию прокрутки
+    const currentPosition = window.pageYOffset;
+    
+    // Если мы не в самом верху страницы
+    if (currentPosition > 0) {
+        // Используем requestAnimationFrame для плавной анимации
+        window.requestAnimationFrame(scrollToTop);
+        // Прокручиваем на небольшое расстояние вверх
+        window.scrollTo(0, currentPosition - currentPosition / 20);
+    }
+}
+
+// Добавляем обработчик события для кнопки
+scrollToTopButton.addEventListener('click', scrollToTop);
+
+// Показываем или скрываем кнопку в зависимости от положения прокрутки
+function toggleScrollToTopButton() {
+    if (window.pageYOffset > 300) {
+        scrollToTopButton.style.display = 'block';
+    } else {
+        scrollToTopButton.style.display = 'none';
+    }
+}
+
+// Добавляем обработчик события прокрутки
+window.addEventListener('scroll', toggleScrollToTopButton);
+
+// Изначально скрываем кнопку
+scrollToTopButton.style.display = 'none';
+    </script>
+
+<button id="showLecturesBtn">Показать лекции</button>
+
+<table id="lecturesTable" style="display: none; opacity: 0; transition: opacity 0.5s ease-in-out;">
+  <thead>
+    <tr>
+        <th>1</th>
+        <th>Название лекции</th>
+        <th><input type="checkbox"></th>
+    </tr>
+</thead>
+<tr>
+    <td>1</td>
+    <td>Математический анализ</td>
+    <td><input type="checkbox"></td>
+</tr>
+<tr>
+    <td>1</td>
+    <td>Технологии исскуственного интелекта</td>
+    <td><input type="checkbox"></td>
+</tr>
+<tr>
+    <td>1</td>
+    <td>Создание корпоративных систем</td>
+    <td><input type="checkbox"></td>
+</tr>
+<tr>
+    <td>1</td>
+    <td>Русский язык и культура речи</td>
+    <td><input type="checkbox"></td>
+</tr>
+<tr>
+    <td>1</td>
+    <td>Индустриалльное программирование</td>
+    <td><input type="checkbox"></td>
+</tr>
+<tr>
+    <td>1</td>
+    <td>Фронтенд и бэкенд разработка</td>
+    <td><input type="checkbox"></td>
+</tr>
+<tr>
+    <td>1</td>
+    <td>Дискретная математика</td>
+    <td><input type="checkbox"></td>
+</tr>
+<tr>
+    <td>1</td>
+    <td>Создание программного обеспечения</td>
+    <td><input type="checkbox"></td>
+</tr>
+</table>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const showLecturesBtn = document.getElementById('showLecturesBtn');
+    const lecturesTable = document.getElementById('lecturesTable');
+    let isTableVisible = false;
+
+    showLecturesBtn.addEventListener('click', function() {
+        if (!isTableVisible) {
+            // Показываем таблицу
+            lecturesTable.style.display = 'table';
+            setTimeout(() => {
+                lecturesTable.style.opacity = '1';
+            }, 10); // Небольшая задержка для начала анимации
+            showLecturesBtn.textContent = 'Скрыть лекции';
+        } else {
+            // Скрываем таблицу
+            lecturesTable.style.opacity = '0';
+            setTimeout(() => {
+                lecturesTable.style.display = 'none';
+            }, 500); // Ждем окончания анимации перед скрытием
+            showLecturesBtn.textContent = 'Показать лекции';
+        }
+        isTableVisible = !isTableVisible;
+    });
+});
+</script>
+
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const studentPhoto = document.getElementById('studentPhoto');
+    let isRotating = false;
+
+    function rotateImage() {
+        if (isRotating) {
+            studentPhoto.style.transform = 'rotate(360deg)';
+        } else {
+            studentPhoto.style.transform = 'rotate(0deg)';
+        }
+    }
+
+    studentPhoto.addEventListener('mouseenter', function() {
+        if (!isRotating) {
+            isRotating = true;
+            rotateImage();
+        }
+    });
+
+    studentPhoto.addEventListener('mouseleave', function() {
+        isRotating = false;
+        rotateImage();
+    });
+
+    // Обработчик окончания анимации
+    studentPhoto.addEventListener('transitionend', function() {
+        if (isRotating) {
+            // Если мышь все еще над изображением, сбрасываем поворот без анимации
+            studentPhoto.style.transition = 'none';
+            studentPhoto.style.transform = 'rotate(0deg)';
+            // Восстанавливаем анимацию после короткой задержки
+            setTimeout(() => {
+                studentPhoto.style.transition = 'transform 1s ease';
+                studentPhoto.style.transform = 'rotate(360deg)';
+            }, 20);
+        }
+    });
+});
+
+        // JavaScript часть
+const studentPhoto = document.getElementById('studentPhoto');
+const originalSrc = studentPhoto.src; // Сохраняем оригинальный путь к фото студента
+const teacherSrc = 'prepod.jpg'; // Путь к фото преподавателя
+
+// Обработчик наведения мыши
+studentPhoto.addEventListener('mouseover', function() {
+    this.style.transform = 'scale(1.1)'; // Увеличиваем на 10%
+});
+
+// Обработчик ухода мыши
+studentPhoto.addEventListener('mouseout', function() {
+    this.style.transform = 'scale(1)'; // Возвращаем исходный размер
+});
+
+// Обработчик клика
+studentPhoto.addEventListener('click', function() {
+    this.src = teacherSrc; // Меняем на фото преподавателя
+    
+    // Возвращаем фото студента через 2 секунды
+    setTimeout(() => {
+        this.src = originalSrc;
+    }, 2000);
+});
+
+// Обработчик двойного клика
+studentPhoto.addEventListener('dblclick', function() {
+    alert('Не налегай, у меня не так много любимых преподавателей');
+});
+      </script>
+      <script>
+        // Получаем ссылку на заголовок
+const mainTitle = document.getElementById('mainTitle');
+
+// Начальный размер шрифта (в пикселях)
+const initialFontSize = 32;
+
+// Коэффициент увеличения
+const scaleFactor = 1.1;
+
+// Длительность анимации (в миллисекундах)
+const animationDuration = 300;
+
+// Функция для плавного изменения размера
+function animateFontSize(element, start, end, duration) {
+    let startTime = null;
+
+    function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const progress = Math.min(timeElapsed / duration, 1);
+        const currentSize = start + (end - start) * progress;
+
+        element.style.fontSize = `${currentSize}px`;
+
+        if (progress < 1) {
+            requestAnimationFrame(animation);
+        }
+    }
+
+    requestAnimationFrame(animation);
+}
+
+// Обработчик события наведения мыши
+mainTitle.addEventListener('mouseover', () => {
+    const endSize = initialFontSize * scaleFactor;
+    animateFontSize(mainTitle, initialFontSize, endSize, animationDuration);
+});
+
+// Обработчик события ухода мыши
+mainTitle.addEventListener('mouseout', () => {
+    const currentSize = parseFloat(window.getComputedStyle(mainTitle).fontSize);
+    animateFontSize(mainTitle, currentSize, initialFontSize, animationDuration);
+});
+
+// Устанавливаем начальный размер шрифта
+mainTitle.style.fontSize = `${initialFontSize}px`;
+document.getElementById('mainTitle').addEventListener('click', function() {
+          alert("Вы кликнули на заголовок - так держать!");
+      });
+      </script>
+      <script>
+        // Получаем ссылку на параграф
+const paragraph = document.getElementById('animatedParagraph');
+
+// Массив цветов для анимации
+const colors = ['#ff9999', '#99ff99', '#9999ff', '#ffff99', '#ff99ff', '#99ffff'];
+
+// Индекс текущего цвета
+let currentColorIndex = 0;
+
+// Длительность анимации (в миллисекундах)
+const paragraphAnimationDuration = 1000;
+
+// Функция для плавного изменения цвета фона
+function animateBackgroundColor(element, startColor, endColor, duration) {
+    let startTime = null;
+
+    function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const progress = Math.min(timeElapsed / duration, 1);
+
+        const r = Math.round(startColor.r + (endColor.r - startColor.r) * progress);
+        const g = Math.round(startColor.g + (endColor.g - startColor.g) * progress);
+        const b = Math.round(startColor.b + (endColor.b - startColor.b) * progress);
+
+        element.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+
+        if (progress < 1) {
+            requestAnimationFrame(animation);
+        }
+    }
+
+    requestAnimationFrame(animation);
+}
+
+// Функция для преобразования HEX в RGB
+function hexToRgb(hex) {
+    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? {
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16)
+    } : null;
+}
+
+// Обработчик события клика
+paragraph.addEventListener('click', () => {
+    const currentColor = colors[currentColorIndex];
+    currentColorIndex = (currentColorIndex + 1) % colors.length;
+    const nextColor = colors[currentColorIndex];
+
+    const startRgb = hexToRgb(currentColor);
+    const endRgb = hexToRgb(nextColor);
+
+    animateBackgroundColor(paragraph, startRgb, endRgb, animationDuration);
+});
+
+// Устанавливаем начальный цвет фона
+paragraph.style.backgroundColor = colors[currentColorIndex];
+      </script>
+      <script src="script.js"></script>
+    </body>
+  </html>
+  
+
+    

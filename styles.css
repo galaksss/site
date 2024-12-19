@@ -1,0 +1,273 @@
+body { 
+  font-family: "Arial", sans-serif;  
+  background-color: #fbf7e4;  
+  color: black;  
+  margin: 0;  
+  padding: 0;  
+  transition: background-color 0.3s ease; /* Плавный переход фона */ 
+}  
+
+main {  
+  display: flex;  
+  padding: 0 2rem;  
+}   
+
+main .Text {  
+  max-width: 100%;  
+  padding: 5rem;  
+}  
+
+main .Text .Profiling { 
+  display: flex;  
+  justify-content: space-between;
+}  
+
+main .Text img { 
+  max-width: 100%;  
+  transition: transform 0.3s; /* Плавный переход при наведении */ 
+}  
+
+main .Text img:hover {
+  transform: scale(1.05); /* Увеличение изображения при наведении */ 
+}  
+
+main .web-dev {  
+  margin-top: 2rem;  
+}  
+
+main .web-dev h2 {
+  font-size: 1.5rem;  
+  margin-bottom: 1rem;  
+  transition: color 0.3s; /* Плавный переход цвета */ 
+}  
+
+main .web-dev h2:hover { 
+  color: #007BFF; /* Изменение цвета заголовка при наведении */ 
+}  
+
+main .SecondText .images {
+  display: flex;  
+  justify-content: space-between;  
+}  
+
+main .SecondText .images .imageCont {
+  padding: 0.2vw;  
+  background-color: #ffffff;  
+  transition: box-shadow 0.3s; /* Плавный переход тени */ 
+}  
+
+main .SecondText .images .imageCont:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Тень при наведении */ 
+}  
+
+main .SecondText .images .imageCont img {  
+  max-width: 100%;  
+  height: 250px;  
+  padding: 2px;  
+  background: rgb(0, 0, 0); /* Цвет рамки */  
+  border-radius: 5px; /* Скругленные углы изображения */ 
+}  
+
+main .web-dev .card { 
+  border: 1px solid #333;  
+  padding: 1rem;  
+  margin: 1rem 0;  
+  text-align: center;  
+  transition: transform 0.3s; /* Плавное изменение размера карты */ 
+}  
+
+main .web-dev .card:hover {  
+  transform: scale(1.03); /* Увеличение карты при наведении */ 
+}  
+
+footer {
+  background-color: #ffffff;  
+  color: #000000;  
+  text-align: center;  
+  padding: 1rem;  
+  transition: background-color 0.3s; /* Плавный переход фона */ 
+}  
+
+footer:hover {  
+  background-color: #f0f0f0; /* Цвет фона при наведении */ 
+}  
+
+/* Основной стиль таблицы */
+table {
+  max-width: 100%; /* Занимает всю ширину родительского контейнера */
+  border-collapse: collapse; /* Убирает двойные границы между ячейками */
+  margin: 20px 0; /* Отступ сверху и снизу */
+  font-family: Arial, sans-serif; /* Шрифт таблицы */
+}
+
+/* Заголовки таблицы */
+th {
+  background-color: #d3ceaa; /* Цвет фона заголовков */
+  color: #424242; /* Цвет текста в заголовках */
+  padding: 12px; /* Отступы внутри заголовков */
+  text-align: left; /* Выравнивание текста в заголовках */
+  border-bottom: 2px solid #424242; /* Нижняя граница заголовков */
+}
+
+/* Ячейки таблицы */
+td {
+  padding: 10px; /* Отступы внутри ячеек */
+  border-bottom: 1px solid #ddd; /* Нижняя граница ячеек */
+}
+
+/* Чередование фона строк */
+tr:nth-child(even) {
+  background-color: #d3ceaa; /* Цвет фона четных строк */
+}
+
+/* Эффект наведения на строку */
+tr:hover {
+  background-color: #d1ecf1; /* Цвет фона строки при наведении */
+}
+
+/* Выделение ячейки при наведении */
+td:hover {
+  background-color: #e9f7fa; /* Цвет фона ячейки при наведении */
+}
+
+/* Стилизация таблицы в мобильной версии */
+@media (max-width: 600px) {
+  table {
+      font-size: 14px; /* Уменьшение размера шрифта на мобильных устройствах */
+  }
+
+  th, td {
+      padding: 8px; /* Уменьшение отступов для мобильных устройств */
+  }
+
+  main .Text {  
+    max-width: 100%;  
+    padding: 0px;  
+  }  
+}
+
+button{
+  display: flex;
+  margin: 0 auto;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+  grid-template-rows: repeat(2, auto); /* 2 строки */
+  gap: 24px; /* расстояние между элементами */
+}
+
+h2, img {
+  border: 1px solid gray;
+  text-align: center;
+}
+
+.container {
+  max-width: 100%; /* Максимальная ширина контейнера */
+  margin: 0 auto;    /* Центрирование страницы */
+  padding: 20px;     /* Поля вокруг контейнера */
+}
+
+.images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Адаптивная сетка */
+  gap: 20px;          /* Расстояние между элементами */
+}
+
+.imageCont {
+  border: 1px solid #ddd; /* Граница вокруг изображений */
+  border-radius: 8px;     /* Скругленные углы */
+  overflow: hidden;        /* Скрытие части контента, выходящего за границы */
+  text-align: center;      /* Центрирование текста */
+  transition: transform 0.2s; /* Плавный эффект при наведении */
+}
+
+.imageCont:hover {
+  transform: scale(1.05); /* Увеличение при наведении */
+}
+
+img {
+  max-width: 100%;           /* Изображение занимает 100% ширины контейнера */
+  height: auto;         /* Автоматическая высота для сохранения пропорций */
+}
+
+button {
+  background-color: #8400ff; /* Цвет кнопки */
+  color: white;              /* Цвет текста кнопки */
+  border: none;              /* Убираем границу */
+  padding: 10px 20px;       /* Поля кнопки */
+  cursor: pointer;           /* Указатель курсора при наведении */
+  border-radius: 5px;       /* Скругленные углы кнопки */
+  transition: background-color 0.3s; /* Плавный переход цвета */
+}
+
+button:hover {
+  background-color: #f703ff; /* Темнее цвет при наведении */
+}
+
+iframe{
+  max-width: 100%;
+}
+
+.content {
+  margin-top: 60px; /* Установите отступ, равный высоте меню */
+}
+
+.profile-image {
+  width: 200px; /* или другой желаемый размер */
+  height: 200px;
+  border-radius: 50%; /* для круглой формы */
+  object-fit: cover;
+  border: 3px solid #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#studentPhoto {
+  max-width: 300px; /* или другой желаемый размер */
+  transition: all 0.3s ease; /* плавный переход для всех изменений */
+  cursor: pointer; /* показывает, что на фото можно кликнуть */
+}
+
+#studentPhoto:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0.3); /* добавляем тень при наведении */
+}
+
+/* Для адаптивности на мобильных устройствах */
+@media (max-width: 600px) {
+  .profile-image {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+  }
+}
+
+
+@media (max-width: 100%) {
+  .imageCont {
+      flex-basis: 100%; /* На маленьких экранах элементы занимают всю ширину */
+  }
+}
+@media (min-width: 601px) and (max-width: 100%) {
+  .imageCont {
+      flex-basis: 48%; /* На средних экранах элементы занимают 48% ширины */
+  }
+}
+
+.carousel-item {
+  height: 500px; /* Фиксированная высота, можете изменить по вашему усмотрению */
+}
+
+.carousel-item img {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  width: 100%;
+}

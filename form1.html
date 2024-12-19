@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Форма обратной связи</title> 
+    <link rel="stylesheet" href="form1.css" />
+</head>
+<body>
+    <form id="contactForm">
+        <fieldset>
+            <div>
+                <label for="fname"><b>Имя:</b></label><br>
+                <input type="text" id="fname" name="firstname" required>
+            </div>
+            <div>
+                <label for="lname"><b>Фамилия:</b></label><br>
+                <input type="text" id="lname" name="lastname" required>
+            </div>
+            <div>
+                <label for="dob"><b>Дата рождения:</b></label><br>
+                <input type="date" id="dob" name="birthdate" required>
+            </div>
+            <div>
+                <label for="country-code"><b>Код страны:</b></label><br>
+                <select id="country-code" name="country-code" required>
+                    <option value="+7">Россия (+7)</option>
+                    <option value="+1">США (+1)</option>
+                    <option value="+44">Великобритания (+44)</option>
+                    <!-- Добавьте дополнительные коды стран здесь -->
+                </select>
+            </div>
+            <div>
+                <label for="phone"><b>Номер телефона:</b></label><br>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div>
+                <label for="email"><b>Электронная почта:</b></label><br>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="comments"><b>Комментарии:</b></label><br>
+                <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+            </div>
+            <div>
+                <button type="submit"><b>Отправить</b></button>
+                <button type="reset"><b>Очистить</b></button>
+            </div>
+        </fieldset>
+    </form>
+
+    <script>
+        const formData = {
+            fname: "",
+            lname: "",
+            birthdate: "",
+            countryCode: "",
+            phone: "",
+            email: "",
+            comments: "",
+            printData: function() {
+                console.log(`Имя: ${this.fname}`);
+                console.log(`Фамилия: ${this.lname}`);
+                console.log(`Дата рождения: ${this.birthdate}`);
+                console.log(`Код страны: ${this.countryCode}`);
+                console.log(`Телефон: ${this.phone}`);
+                console.log(`Электронная почта: ${this.email}`);
+                console.log(`Комментарии: ${this.comments}`);
+            }
+        };
+
+        function validateEmail(email) {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(email);
+        }
+
+        function submitForm(event) {
+    event.preventDefault(); // Предотвращает стандартное поведение формы
+    
+    const fname = document.getElementById("fname").value.trim();
+    const lname = document.getElementById("lname").value.trim();
+    const birthdate = document.getElementById("dob").value;
+    const countryCode = document.getElementById("country-code").value;
+    const phone = document.getElementById("phone").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const comments = document.getElementById("comments").value.trim();
+
+    // Проверка на пустые поля
+    if (!fname || !lname || !phone || !email) {
+        alert("Пожалуйста, заполните все обязательные поля.");
+        return;
+    }
+
+    // Проверка на цифры в поле телефона
+    if (!/^\+\d{1,3}\d{10}$/.test(countryCode + phone)) {
+        alert("Телефон должен содержать только цифры и код страны.");
+        return;
+    }
+
+    // Проверка на корректность email
+    if (!validateEmail(email)) {
+        alert("Неправильный формат email.");
+        return;
+    }
+
+    // Заполнение объекта formData
+    formData.fname = fname;
+    formData.lname = lname;
+    formData.birthdate = birthdate;
+    formData.countryCode = countryCode;
+    formData.phone = phone;
+    formData.email = email;
+    formData.comments = comments;
+
+    // Вывод данных в консоль
+    formData.printData();
+
+    // Создаем элемент для сообщения
+    const messageElement = document.createElement('div');
+    messageElement.textContent = 'Форма отправлена!';
+    messageElement.style.position = 'fixed';
+    messageElement.style.top = '20px';
+    messageElement.style.left = '50%';
+    messageElement.style.transform = 'translateX(-50%)';
+    messageElement.style.padding = '10px 20px';
+    messageElement.style.backgroundColor = '#4CAF50';
+    messageElement.style.color = 'white';
+    messageElement.style.borderRadius = '5px';
+    messageElement.style.transition = 'opacity 0.5s ease';
+
+    // Добавляем элемент на страницу
+    document.body.appendChild(messageElement);
+
+    // Анимация изменения цвета
+    let hue = 0;
+    const colorInterval = setInterval(() => {
+        hue = (hue + 10) % 360;
+        messageElement.style.backgroundColor = `hsl(${hue}, 70%, 50%)`;
+    }, 100);
+
+    // Удаляем сообщение через 3 секунды
+    setTimeout(() => {
+        clearInterval(colorInterval);
+        messageElement.style.opacity = '0';
+        setTimeout(() => {
+            document.body.removeChild(messageElement);
+        }, 500);
+    }, 3000);
+}
+
+// Добавление обработчика события отправки формы
+const form = document.getElementById("contactForm");
+form.addEventListener("submit", submitForm);
+    </script>
+</body>
+</html>

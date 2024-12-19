@@ -1,0 +1,231 @@
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>my site
+    </title>
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header>
+        <div class="topHead">
+          <div class="logo">
+            <img src="images/logo.jpg" alt="Logo" />
+          </div>
+  
+          <div class="user-info">
+            <p>Группа: "ЭФБО-06-23"</p>
+            <p>Наротнев Георгий Владиславович</p>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li onclick="toggleFirstSem()"><a href="firstsem.html">Первый семестр</a></li>
+            <li><a href="#">Второй семестр</a></li>
+            <li><a href="#">Услуги</a></li>
+            <li ><a href="form1.html">Авторизация</a></li>
+          </ul>
+        </nav>
+      </header>
+
+
+    <main>
+        <div id="qwer">
+            <link rel="stylesheet" href="styles.css" />
+            <h1>Первый семестр</h1>
+            <section id="sec1">
+                <h2>Лекции</h2>
+                <table border="1px" cellspacing="0px" cellpadding="5px">
+                    <thead>
+                        <tr>
+                            <th>1</th>
+                            <th>Название лекции</th>
+                            <th><input type="checkbox"></th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>1</td>
+                        <td>Математический анализ</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Технологии исскуственного интелекта</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Создание корпоративных систем</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Русский язык и культура речи</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Индустриалльное программирование</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Фронтенд и бэкенд разработка</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Дискретная математика</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Создание программного обеспечения</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                </table>
+            </section>
+
+            <section id="sec2">
+                <h2>Практики</h2>
+                <table id="practiceTable" border="1px" cellspacing="0px" cellpadding="5px">
+                    <thead>
+                        <tr>
+                            <th>1</th>
+                            <th>Название практик</th>
+                            <th><input type="checkbox"></th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>1</td>
+                        <td>Математический анализ</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Технологии исскуственного интелекта</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Создание корпоративных систем</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Русский язык и культура речи</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Индустриалльное программирование</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Фронтенд и бэкенд разработка</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Дискретная математика</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Создание программного обеспечения</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                </table>
+            </section>
+            <script>const secondSemesterTopics = [
+                "Базовое бэкенд-приложение",
+                "HTTP-запросы",
+                "JSON и работа с ним",
+                "HTTP-ответы",
+                "Проектирование API",
+                "Роутинг и его настройка",
+                "NoSQL базы данных",
+                "Обеспечение авторизации и доступа пользователей",
+                "Работа сторонних сервисов уведомления и авторизации",
+                "Основы ReactJS",
+                "Работа с компонентами динамической DOM",
+                "Использование хуков в React",
+                "Основы микросервисной архитектуры",
+                "Разработка классических модулей веб-приложений",
+                "Разработка классических модулей веб-приложений"
+            ];
+            
+            const button = document.createElement('button');
+            button.textContent = 'Посмотреть практики второго семестра';
+            button.id = 'changeSemesterBtn';
+            document.querySelector('#sec2').appendChild(button);
+            
+            let isSecondSemester = false;
+            
+            // Изменено: используем конкретный идентификатор таблицы
+            const practiceTable = document.getElementById('practiceTable');
+            const firstSemesterRows = Array.from(practiceTable.querySelectorAll('tr:not(:first-child)')).map(row => {
+                return row.querySelector('td:nth-child(2)').textContent;
+            });
+            
+            button.addEventListener('click', function() {
+                // Изменено: используем конкретный идентификатор таблицы
+                const tbody = practiceTable.querySelector('tbody') || practiceTable;
+                
+                // Удаляем все строки кроме заголовка
+                Array.from(practiceTable.querySelectorAll('tr:not(:first-child)')).forEach(row => row.remove());
+                
+                if (!isSecondSemester) {
+                    secondSemesterTopics.forEach((topic, index) => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${index + 1}</td>
+                            <td>${topic}</td>
+                            <td><input type="checkbox"></td>
+                        `;
+                        tbody.appendChild(row);
+                    });
+                    button.textContent = 'Посмотреть практики первого семестра';
+                    isSecondSemester = true;
+                } else {
+                    firstSemesterRows.forEach((topic, index) => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${index + 1}</td>
+                            <td>${topic}</td>
+                            <td><input type="checkbox"></td>
+                        `;
+                        tbody.appendChild(row);
+                    });
+                    button.textContent = 'Посмотреть практики второго семестра';
+                    isSecondSemester = false;
+                }
+            });
+            </script>
+
+            <section id="sec3">
+                <h2>Карта</h2>
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A24216f91f8f458f9b73bd22495f3449ccb3bf1b676a1969ba4db98b6a86c24b8&amp;source=constructor"
+                    width="100%" height="240" frameborder="0"></iframe>
+            </section>
+
+            <section id="sec4">
+                <h2>Программа</h2>
+                <object data="index.html"></object>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>© Наротнев Георгий Владиславович, 2024</p>
+    </footer>
+
+
+</body>
+
+</html>
