@@ -56,7 +56,7 @@ function showMessage(message) {
     resetBackgroundColor();
     
     // Изменение цвета фона
-    changeBackgroundColor('thistle');
+    changeBackgroundColor('Lavender');
     
     // Переключение видимости элемента с классом .content
     toggleVisibility('.content');
